@@ -149,7 +149,7 @@ module.exports = {
             include: paths.appSrc,
             use: [
               {
-                loader: path.resolve('/home/dara/klass/index.js'),
+                loader: require.resolve('klass-loader'),
                 options: {
                   todo: "todo",
                 },
