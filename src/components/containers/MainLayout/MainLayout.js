@@ -1,7 +1,6 @@
 import React , { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import QuestionPicker from '../QuestionPicker/QuestionPicker';
-import SelectLearning from '../SelectLearning/SelectLearning';
+import PlayStory from '../PlayStory/PlayStory';
 import SelectStory from '../SelectStory/SelectStory';
 
 class MainLayout extends Component {
@@ -16,7 +15,7 @@ class MainLayout extends Component {
         <div>
           <Switch>
             <Route exact path='/' component={SelectStory}/>
-            <Route path='/:knows' component={SelectLearning}/>
+            <Route path='/:story' component={PlayStory}/>
           </Switch>
         </div>
       );
