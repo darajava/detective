@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bebas Neue'), url('/bebas.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
