@@ -9,15 +9,6 @@ class Story extends Component {
     constructor() {
       super();
 
-      this.state = {
-        answerOpen: true,
-      };
-
-      this.toggleAnswer = this.toggleAnswer.bind(this);
-    }
-
-    toggleAnswer() {
-      this.setState({answerOpen: !this.state.answerOpen});
     }
 
     render() {
@@ -27,8 +18,8 @@ class Story extends Component {
       return (
         <div klass="wrapper">
           <h1 klass='title'>{story.title}</h1>
-          <AccordionSection title={'Story'} text={story.story} open={true}/>
-          <AccordionSection title={'Answer'} text={story.answer} />
+          <AccordionSection title={'Story'} text={story.story} open={true} noTitle={true}/>
+          <AccordionSection title={'Explanation'} text={story.answer} />
           <AccordionSection title={'Hints'} text={story.hints.map((e) => <li>{e}</li>)} />
 
         </div>
