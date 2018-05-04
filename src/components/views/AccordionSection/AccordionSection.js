@@ -34,7 +34,7 @@ class AccordionSection extends Component {
       let open = this.state.answerOpen;
 
       return (
-        <div>
+        <div klass="wrapper">
           {!noTitle && <p onClick={this.toggleAnswer} klass='title'>
             <div klass='chevron'>
               <Glyphicon glyph={"chevron-" + (open ? "up" : "down")} />

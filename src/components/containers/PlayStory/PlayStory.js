@@ -20,6 +20,7 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
             'Alcohol was banned in America during this era',
             'You are retarded if you didn\'t get it by now',
           ],
+          sound: new Audio('/crowd.mp3')
         },
       ];
     }
@@ -31,6 +32,17 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
       let index = parseInt(this.props.match.params.story) - 1;
 
       let story = this.stories[0];
+
+      story.sound.play();
+      story.sound.loop = true;
+      story.sound.volume = 0;
+
+      let interval = setInterval(() => {
+        story.sound.volume += 0.0005;
+        if (story.sound.volume > 0.15) {
+          clearInterval(interval);
+        } 
+      }, 10);
 
 
       return (

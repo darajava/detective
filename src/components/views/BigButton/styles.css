@@ -2,7 +2,8 @@
 	text-decoration: none;
 	width: 90vw;
 	margin: 5vw;
-	padding: 5vw;
+	margin-bottom: calc(5vw + 10px);
+	padding: calc(5vw + 10px);
 	border: 1px solid #ddd;
 	border-radius: 7px;
 	background-color: white;

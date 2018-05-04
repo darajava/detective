@@ -1,7 +1,9 @@
 
+.wrapper {
+  margin-top: 7vw;
+}
 
 .title {
-  margin-top: 7vw;
   font-weight: bold;
   font-size: 24px;
 }
