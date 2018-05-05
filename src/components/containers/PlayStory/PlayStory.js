@@ -65,8 +65,7 @@ Frank took the dog out the back and killed it because of what it had done to his
         {
           title: 'Noisy stranger',
           story: `Jane was woken in the middle of the night by a loud angry knocking on the door. She was too afraid to answer it at first, but when she opened the door she apologised.`,
-          answer: `Jane had come home from a long night out and ordered take out food at 2am. The restaurant was quite far away, but as it was the only one open, she decided to order the food. 
-             She was asleep when the delivery man arrived and he was waiting outside for 10 minutes.`,
+          answer: `Jane had come home from a long night out and ordered take out food at 2am. The restaurant was quite far away, but as it was the only one open, she decided to order the food. She was asleep when the delivery man arrived and he was waiting outside for 10 minutes.`,
           hints: [
             'Jane was drunk',
             'Jane was expecting this person',
