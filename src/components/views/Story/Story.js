@@ -11,7 +11,9 @@ const Story = (props) => {
     <div klass="wrapper">
       <h1 klass='title'>{story.title}</h1>
       <AccordionSection title={'Story'} text={story.story} open={true} noTitle={true}/>
-      <AccordionSection title={'Hints'} text={story.hints.map((e) => <li>{e}</li>)} />
+      
+      <AccordionSection title={'Hints'} text={<ol>{story.hints.map((e) => <li>{e}</li>)}</ol>} />
+      
       <AccordionSection title={'Explanation'} text={story.answer} />
     </div>
   );
