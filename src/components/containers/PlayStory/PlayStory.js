@@ -22,25 +22,82 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
           ],
           sound: new Audio('/crowd.mp3')
         },
+        {
+          title: 'Time travel murder',
+          story: `Detective Mahoney stood there bemused. He was now in the same room as the main suspect in Sarah Patterson's murder.
+Even though he could see that there were very evident struggle marks on her face, and all of the evidence he had pointed to her, Mahoney knew that Michelle was not the killer. `,
+          answer: `Mahoney is in the morgue. Michelle was also murdered in an unrelated incident.
+Sarah's autopsy was performed in the same place as Michelle.
+They had used the same scissors on both victims for getting nail clippings. 
+Even though they had followed procedure and cleaned the scissors, some DNA evidence remained and was transferred from Michelle to Sarah.
+Michelle, who had been murdered over a month ago was the main suspect in Sarah's murder because the tests found traces of her DNA on Sarah because it was left on the scissors.`,
+          hints: [
+            'The girls did not know each other',
+            'Michelle is dead',
+            'Both girls were murdered',
+            'Michelle died before Sarah was murdered',
+            'Both murders were unsolved and needed forensic evidence ',
+            'You are retarded if you didn\'t get it by now',
+          ],
+          sound: new Audio('/morgue.mp3')
+        },
+        {
+          title: 'Bad lieutenant',
+          story: `No one had called the police. Officer George Sklansky arrived at the house in an unmarked car. 
+He entered the kitchen to see Melissa dead on the floor.
+He opened the back door of the house and found Frank in the garden with blood on his hands and clothes.  
+Frank had a large knife in his hand and was sweating a lot. 
+George Skalinsky decided not to arrest Frank for murder.    `,
+          answer: `George is a family friend of Frank and his wife Melissa.
+ He arrives in an unmarked car because he is off duty and is going to the house to meet them.  
+Frank was the only person in the house at the time Melissa had been killed but he was not the murderer.
+She was killed by their dog Rover. Rover was a retired police dog who was given to them by Sklansky and who he knew had issues with attacking people.
+Frank took the dog out the back and killed it because of what it had done to his wife...`,
+          hints: [
+            'Frank was the only person in the house when Melissa was killed',
+            'Frank did not kill Mellisa',
+            'Geroge Sklansky is a family friend',
+            'Frank didn\'t call the police because he wanted to kill the dog first',
+            'You are retarded if you didn\'t get it by now',
+          ],
+          sound: new Audio('/sirens.mp3')
+        },
       ];
+
     }
 
     componentDidMount() {
+
+    }
+
+    componentWillUnmount() {
+      let index = parseInt(this.props.match.params.story) - 1;
+
+      let story = this.stories[index];
+      
+      clearInterval(this.loudInterval);
+
+      let interval = setInterval(() => {
+        story.sound.volume -= 0.001;
+        if (story.sound.volume - 0.001 < 0) {
+          clearInterval(interval);
+        } 
+      }, 10);
     }
 
     render() {
       let index = parseInt(this.props.match.params.story) - 1;
 
-      let story = this.stories[0];
+      let story = this.stories[index];
 
-      // story.sound.play();
+      story.sound.play();
       story.sound.loop = true;
       story.sound.volume = 0;
 
-      let interval = setInterval(() => {
+      this.loudInterval = setInterval(() => {
         story.sound.volume += 0.0005;
         if (story.sound.volume > 0.15) {
-          clearInterval(interval);
+          clearInterval(this.loudInterval);
         } 
       }, 10);
 

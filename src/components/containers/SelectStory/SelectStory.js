@@ -16,13 +16,13 @@ class SelectStory extends Component {
         },
         {
           link: '2',
-          title: 'A noisy neighbour',
-          difficulty: 'Difficulty: 4/5',
+          title: 'Time travel murder',
+          difficulty: 'Difficulty: 5/5',
         },
         {
           link: '3',
-          title: 'Community values',
-          difficulty: 'Difficulty: 2/5',
+          title: 'Bad lieutenant',
+          difficulty: 'Difficulty: 3/5',
         },
         {
           link: '4',
@@ -39,7 +39,7 @@ class SelectStory extends Component {
 
       for (let i = 0; i < this.stories.length; i++) {
         let story = this.stories[i];
-        components.push(<BigButton text={story.title} locked={parseInt(story.link) > 2} soustitle={story.difficulty} link={story.link} />);
+        components.push(<BigButton text={story.title} locked={parseInt(story.link) > 3} soustitle={story.difficulty} link={story.link} />);
       }
 
       return (
