@@ -9,6 +9,7 @@
 	background-color: white;
 
 	max-width: 500px;
+	box-shadow: 0px 3px 18px -6px rgba(135, 135, 135, 0.58);
 	position: relative;
 
 }
@@ -16,6 +17,8 @@
 .button.locked {
 	background-color: #efefef;
 	border: 0;
+	box-shadow: none;
+
 }
 
 .locked .text, .locked .soustitle {

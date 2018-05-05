@@ -15,11 +15,11 @@ const BigButton = (props) => {
   return (
     <Link style={{ textDecoration: 'none' }} to={props.link}>
       <div klass={'button ' + buttonShadow}>
-        <div klass={'soustitle'}>
-          {props.soustitle}
-        </div>
         <div klass='text'>
           {props.text}
+        </div> 
+        <div klass={'soustitle'}>
+          {props.soustitle}
         </div>
         {lockedIcon}
       </div>

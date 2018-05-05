@@ -33,7 +33,7 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
 
       let story = this.stories[0];
 
-      story.sound.play();
+      // story.sound.play();
       story.sound.loop = true;
       story.sound.volume = 0;
 
