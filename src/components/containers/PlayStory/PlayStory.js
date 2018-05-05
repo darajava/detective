@@ -20,7 +20,8 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
             'Alcohol was banned in America during this era',
             'You are retarded if you didn\'t get it by now',
           ],
-          sound: new Audio('/crowd.mp3')
+          sound: new Audio('/crowd.mp3'),
+          bg: 'bar.jpg',
         },
         {
           title: 'Time travel murder',
@@ -39,7 +40,8 @@ On his way home he is loud and obnoxious. A police man spots him and can easily 
             'Both murders were unsolved and needed forensic evidence ',
             'You are retarded if you didn\'t get it by now',
           ],
-          sound: new Audio('/morgue.mp3')
+          sound: new Audio('/morgue.mp3'),
+          bg: 'morgue.jpg',
         },
         {
           title: 'Bad lieutenant',
@@ -60,7 +62,8 @@ Frank took the dog out the back and killed it because of what it had done to his
             'Frank didn\'t call the police because he wanted to kill the dog first',
             'You are retarded if you didn\'t get it by now',
           ],
-          sound: new Audio('/sirens.mp3')
+          sound: new Audio('/sirens.mp3'),
+          bg: 'garden.jpg',
         },
         {
           title: 'Noisy stranger',
@@ -75,7 +78,8 @@ Frank took the dog out the back and killed it because of what it had done to his
             'Jane was unmarried',
             'You are retarded if you didn\'t get it by now',
           ],
-          sound: new Audio('/snoring.mp3')
+          sound: new Audio('/snoring.mp3'),
+          bg: 'door.jpg',
         },
       ];
 

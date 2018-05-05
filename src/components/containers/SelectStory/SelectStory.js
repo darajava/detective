@@ -48,7 +48,7 @@ class SelectStory extends Component {
       }
 
       return (
-        <div>
+        <div> 
           {components}
         </div>
       );

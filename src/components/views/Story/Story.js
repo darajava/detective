@@ -6,9 +6,13 @@ import AccordionSection from '../AccordionSection/AccordionSection';
 
 const Story = (props) => {
   let story = props.story;
+
+  let style = {
+    backgroundImage: "url(" + story.bg + ")",
+  };
   
   return (
-    <div klass="wrapper">
+    <div style={style} klass="wrapper">
       <h1 klass='title'>{story.title}</h1>
       <AccordionSection title={'Story'} text={story.story} open={true} noTitle={true}/>
       
